@@ -169,7 +169,7 @@ int VMatcher:: match(cv::Mat& image1,
 
 	// 2. Match the two image descriptors
 	// Construction of the VMatcher
-	//cv::BruteForceMatcher<cv::L2<float>> VMatcher;
+	//cv::BruteForceMatcher<cv::L2<float>> matcher;
 	// from image 1 to image 2
 	// based on k nearest neighbours (with k=2)
 	std::vector<std::vector<cv::DMatch> > matches1;

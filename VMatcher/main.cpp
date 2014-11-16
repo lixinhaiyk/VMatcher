@@ -8,13 +8,11 @@ int main()
 	int numKeyPoints = 2000;
 
 	//Instantiate robust matcher
-
 	VMatcher vMatcher;
 
 	//instantiate detector, extractor, matcher
-
-	cv::Ptr<cv::FeatureDetector> detector = new cv::OrbFeatureDetector(numKeyPoints);
-	cv::Ptr<cv::DescriptorExtractor> extractor = new cv::OrbDescriptorExtractor;
+	cv::Ptr<cv::FeatureDetector> detector = new cv::ORB(numKeyPoints);
+	cv::Ptr<cv::DescriptorExtractor> extractor = new cv::ORB;
 	cv::Ptr<cv::DescriptorMatcher> matcher = new cv::BruteForceMatcher<cv::HammingLUT>;
 
 	vMatcher.setFeatureDetector(detector);
